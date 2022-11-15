@@ -3,6 +3,7 @@ import java.util.LinkedList;
 import javax.swing.JOptionPane;
 
 import Datos.Seleccion;
+import prod.Producto;
 import Datos.Estadio;
 import Datos.Encargado;
 import Datos.Partido;
@@ -69,8 +70,18 @@ public class Main {
 				grupo_h.add(new Seleccion (29,"Ghana ",0,true));
 				grupo_h.add(new Seleccion (30,"Uruguay ",0,true));
 				grupo_h.add(new Seleccion (31,"Corea Del Sur ",0,true));	
+				grupo_h.add(new Seleccion (31,"Corea Del Sur ",0,true));
 				
-		Encargado Pancho = new Encargado (1,"Pancho ");		
+				//System.out.println(grupo_a.get((int)(Math.random()*4)).getPais());
+				
+				int g1=0, g2, g3, g4, g5, g6, g7, g8;
+				
+				
+				//g1=Integer.parseInt(grupo_a.get((int)(Math.random()*4)).getPais());
+				//g2=Integer.parseInt(grupo_b.get((int)(Math.random()*4)).getPais());
+				//g1=Integer.parseInt(JOptionPane.showInputDialog(grupo_a.get((int)(Math.random()*4)).getPais()));
+				
+				Encargado Pancho = new Encargado (1,"Pancho ");		
 		
 				LinkedList<Estadio> Estadios = new LinkedList<Estadio>();
 		
@@ -82,16 +93,39 @@ public class Main {
 				Estadios.add( new Estadio (5,"Estadio Internacional Jalifa "));
 				Estadios.add( new Estadio (6,"Estadio de Lusail "));
 				Estadios.add( new Estadio (7,"Estadio 974 "));
+				
+				System.out.println(Estadios.get((int)(Math.random()*8)).getNombre());
 		
 		Partido Fecha1 = new Partido (1,"20 de Noviembre");
 		Partido Fecha2 = new Partido (2,"21 de Noviembre");
 		Partido Fecha3 = new Partido (3,"22 de Noviembre");
 				
-		int menu;
-		menu:Integer.parseInt(JOptionPane.showInputDialog("~~Bienvenido a Qatar 2022~~ \n Elija una de las siguientes opciones \n1. Ver Fixture Principal \n2. Iniciar partidos de Fase de Grupos \n3. Salir del Menu "));
-	}
-	public static void CrearPartido(Encargado Pancho, Partido Fecha1 ) {
+		int menu=0;
+		menu=Integer.parseInt(JOptionPane.showInputDialog("~~Bienvenido a Qatar 2022~~ \n Elija una de las siguientes opciones "
+				+ "\n1. Ver Fixture Principal \n2. Iniciar partidos de Fase de Grupos \n3. Salir del Menu "));
 		
-}	
+		switch (menu) {
+		case 1:
+			
+			break;
+		case 2:
+			
+			break;
+
+		default:
+			break;
+		}
 	}
+	
+	public static void CrearPartido(Encargado Pancho, Partido Fecha1, LinkedList<Seleccion> grupo_a, Seleccion Seleccion) {
+		JOptionPane.showMessageDialog(null, "El encargado .. esta creando los partidos " );
+			
+		//grupo_a.get()(seleccion.getPais()+" - ");
+		
+		
+		for(Seleccion elemento : grupo_a) {
+			System.out.print(elemento.getPais()+ " - ");
+			}	
+    }	
+	 }
 	
